@@ -23,6 +23,32 @@
 
 
 ### Routes
+- Home-Page Route: main entry point to the page
+
+- All Plants Route: to display all plants regardless of category
+
+- Category Specific Routes: vegetable, herb and fruit
+    - Detail Route for each specific plant in these categories
+
+-   Volunteers Route: to display all volunteers
+    - Volunteer Detail Route: for specifics of volunteer duties per user
+
+
+### Functions
+
+- Function to get all plants
+- Function to get plants by category
+- Function to get plant details
+
+
+### ***_Links_***
+ [My Trello Board](https://trello.com/invite/b/jbcz1LPn/ATTI98c7373809904c95d96e340bffc866d048A73F9B/community-garden-app)
+
+
+
+### ***_Credits_***
+- [Wireframe](https://wireframe.cc/pro/pp/8737630d7723425)
+- [Trello](https://wireframe.cc/pro/pp/8737630d7723425)
 
 
     
