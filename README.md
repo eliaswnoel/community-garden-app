@@ -8,11 +8,11 @@
 
 ### Wireframe
 
-![Homepage](https://wireframe.cc/TX38CU)
-![add-plant-page](https://wireframe.cc/kjr2Mr)
-![volunteer](https://wireframe.cc/DeMdve)
-![all-vegetables](https://wireframe.cc/SFQ4iC)
-![details](https://wireframe.cc/99Tpy9)
+[Homepage](https://wireframe.cc/TX38CU)
+[Add-Plant-Form](https://wireframe.cc/kjr2Mr)
+[volunteer-Form](https://wireframe.cc/DeMdve)
+[All-Vegetables-Page](https://wireframe.cc/SFQ4iC)
+[Details-Page](https://wireframe.cc/99Tpy9)
 
 ##  Pseudocode for App
 
