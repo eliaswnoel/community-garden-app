@@ -8,12 +8,12 @@
 
 ### Wireframe
 
-[Homepage](https://wireframe.cc/TX38CU)
-[Add-Plant-Form](https://wireframe.cc/kjr2Mr)
-[volunteer-Form](https://wireframe.cc/DeMdve)
-[All-Vegetables-Page](https://wireframe.cc/SFQ4iC)
-[Details-Page](https://wireframe.cc/99Tpy9)
-[Garden Beds](https://wireframe.cc/s9DJfz)
+[Homepage](https://wireframe.cc/jarKKb)
+[Gardens-Page](https://wireframe.cc/F63uaF)
+[A Garden's Page](https://wireframe.cc/vAlE1g)
+[Add-Plants-Page](https://wireframe.cc/VjNION)
+[Volunteers-Page](https://wireframe.cc/QtxB7c)
+[Plant-Details-Page](https://wireframe.cc/99Tpy9)
 
 ##  Pseudocode for App
 
@@ -40,6 +40,9 @@
 - Function to get all plants
 - Function to get plants by category
 - Function to get plant details
+
+### Post MVP
+- User can update their details page with photos of plants growth over time
 
 
 ### ***_Links_***
