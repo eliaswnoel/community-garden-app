@@ -13,6 +13,7 @@
 [volunteer-Form](https://wireframe.cc/DeMdve)
 [All-Vegetables-Page](https://wireframe.cc/SFQ4iC)
 [Details-Page](https://wireframe.cc/99Tpy9)
+[Garden Beds](https://wireframe.cc/s9DJfz)
 
 ##  Pseudocode for App
 
