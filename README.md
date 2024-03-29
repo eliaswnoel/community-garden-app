@@ -8,12 +8,12 @@
 
 ### Wireframe
 
-[Homepage](https://wireframe.cc/jarKKb)
-[Gardens-Page](https://wireframe.cc/F63uaF)
-[A Garden's Page](https://wireframe.cc/vAlE1g)
-[Add-Plants-Page](https://wireframe.cc/VjNION)
-[Volunteers-Page](https://wireframe.cc/QtxB7c)
-[Plant-Details-Page](https://wireframe.cc/99Tpy9)
+ ![Homepage](/images/homepage.png)  
+![Gardens Page](/images/allGardenPage.png)
+![A Garden's Personal Page](/images/gardenOnePage.png)
+![Add Plants Page](/images/addPlantPage.png)
+![Plant-Details-Page](/images/plantDetailPage.png)
+![Volunteers-Page](/images/volunteerPage.png)
 
 ##  Pseudocode for App
 
@@ -21,6 +21,11 @@
 - User can see all the plants that the community has planted in the garden
 - User can go into a detail page for each plant and see details of plant such as when it was planted, which garden bed it was planted in, etc.
 - User can go to volunteer sign-up form to sign up for a day to work in the garden and what they will be working on in the garden
+
+### Models
+- Volunteer
+- Plants 
+- Gardens
 
 
 ### Routes
