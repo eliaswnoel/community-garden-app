@@ -9,9 +9,25 @@ a {
 
 .menu {
   border-color: black;
-  border: solid black 2px;
+  border: solid rgb(136, 135, 135) 2px;
 
 }
 .menu a {
   color: gray;
+}
+
+.gardens {
+  color:#565182;
+}
+.gardens div {
+  padding: 2%;
+  float: left; 
+  width: 46%;
+  text-align: center;
+}
+
+
+.gardens img {
+  height: 100%;
+  width: 100%;
 }
