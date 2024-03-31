@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+<div class="menu">
+    <a href = "homepage">HOME</a>
+    <a href = "/gardens">GARDENS</a>  
+</div>
+
+<form id="new-form" action="/gardens" method="POST">
+  <label>Garden Name:</label>
+  <input type="text" name="name">
+  <label>Start Date:</label>
+  <input type="date" name="startDate">
+  <label>Adress:</label>
+  <input type="text" name="address">
+  <label>Founders:</label>
+  <input type="text" name="founders">
+ 
+  <label>Add Garden:</label>
+  <input type="checkbox" name="addGarden" checked>
+  <input type="submit" value="Add Garden">
+</form>
+
+<%- include('../partials/footer') %>

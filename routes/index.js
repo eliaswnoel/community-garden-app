@@ -1,14 +1,14 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Garden' });
-});
+const gardensCtrl = require('../controllers/gardens');
 
-router.get('/gardens', function(req, res, next) {
-  res.render('gardens', { title: 'Garden' });
-});
+/* GET home page. */
+router.get('/', gardensCtrl.index);
+
+router.get('/gardens', gardensCtrl.list);
+
+router.get('/add-garden', gardensCtrl.new);
 
 
 module.exports = router;
