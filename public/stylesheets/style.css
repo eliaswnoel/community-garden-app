@@ -6,3 +6,12 @@ body {
 a {
   color: #00B7FF;
 }
+
+.menu {
+  border-color: black;
+  border: solid black 2px;
+
+}
+.menu a {
+  color: gray;
+}

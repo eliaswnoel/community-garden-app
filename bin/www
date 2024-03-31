@@ -8,6 +8,12 @@ var app = require('../server');
 var debug = require('debug')('garden-app:server');
 var http = require('http');
 
+/***
+ * Set rendered
+ */
+app.set('view engine', 'ejs');
+
+
 /**
  * Get port from environment and store in Express.
  */
