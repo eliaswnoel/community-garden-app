@@ -7,6 +7,9 @@ const gardensCtrl = require('../controllers/gardens');
 router.get('/', gardensCtrl.index);
 // GET /gardens/new
 router.get('/new', gardensCtrl.new);
+// POST /gardens
+router.get('/:id', gardensCtrl.show);
+router.post('/', gardensCtrl.create);
 
 
 

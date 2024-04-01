@@ -31,3 +31,8 @@ a {
   height: 100%;
   width: 100%;
 }
+
+.garden-show-page__image {
+  height: 25%;
+  width: 25%;
+}

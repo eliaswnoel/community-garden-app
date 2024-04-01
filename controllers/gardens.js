@@ -6,7 +6,8 @@ module.exports = {
     index,
     list,
     new: newGarden,
-    create
+    create,
+    show
 };
 
 async function index(req, res, next) {
@@ -44,3 +45,15 @@ async function create(req, res, next) {
       res.render('gardens/new', { errorMsg: err.message });
     }
   }
+
+  async function show(req, res) {
+    try {
+        const garden = await Garden.findById(req.params.id)
+        // const garden = await Garden.findById(req.params.id).populate('vegetable herb fruit flower');
+        res.render('gardens/show', { title: 'Garden', garden: garden });
+    } catch (err) {
+        // Handle errors
+        console.error(err);
+        res.status(500).send('Internal Server Error');
+    }
+};

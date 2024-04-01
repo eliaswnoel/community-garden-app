@@ -8,7 +8,7 @@
 
 ### Wireframe
 
- ![Homepage](/images/homepage.png)  
+![Homepage](/images/homepage.png)  
 ![Gardens Page](/images/allGardenPage.png)
 ![A Garden's Personal Page](/images/gardenOnePage.png)
 ![Add Plants Page](/images/addPlantPage.png)

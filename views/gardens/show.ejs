@@ -1,0 +1,32 @@
+<%- include('../partials/header') %>
+
+<h1><%= garden.name %></h1>
+<p>Year Founded: <%= garden.yearFounded %></p>
+<p>Address: <%= garden.address %></p>
+<!-- <img src="<%= garden.imagePath %>" alt="<%= garden.name %> Image"> -->
+<img src="<%= garden.imagePath %>" alt="<%= garden.name %>" class="garden-show-page__image">
+
+<div class="plants">
+    <h2>Vegetables</h2>
+    <ul id="vegetableList">
+        <!-- vegetable plants added here -->
+    </ul>
+
+    <h3>Herbs</h3>
+    <ul id="herbList">
+        <!-- herb plants added here -->
+    </ul>
+
+    <h4>Fruits</h4>
+    <ul id="fruitList">
+        <!-- flower list added here -->
+    </ul>
+
+    <h5>Flowers</h5>
+    <ul id="flowerList">
+        <!-- flower list added here -->
+    </ul>
+</div>
+
+
+<%- include('../partials/footer') %>

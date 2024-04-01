@@ -8,12 +8,25 @@
 <form id="new-form" action="/gardens" method="POST">
   <label>Garden Name:</label>
   <input type="text" name="name">
-  <label>Start Date:</label>
-  <input type="date" name="startDate">
+  
+  <label>Year Founded:</label>
+  <select name="yearFounded">
+     <!-- Populate dropdown with a range of years -->
+    <option value="">Select Year</option> <!-- Placeholder -->
+    <script>
+      var startYear = 1950;
+      var endYear = 2050;
+      var select = document.getElementsByName("yearFounded")[0]; // Get the select element
+      for (var year = startYear; year <= endYear; year++) {
+        var option = document.createElement("option"); // Create option element
+        option.text = year; // Set option text to the year
+        option.value = year; // Set option value to the year
+        select.add(option); // Add option to select element
+      }
+    </script>
+  </select>
   <label>Adress:</label>
   <input type="text" name="address">
-  <!-- <label>Founders:</label>
-  <input type="text" name="founders"> -->
  
   <label>Image url:</label>
   <input type="text" name="imagePath" >
