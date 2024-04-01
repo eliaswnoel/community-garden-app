@@ -35,4 +35,12 @@ a {
 .garden-show-page__image {
   height: 25%;
   width: 25%;
+  float: top; 
+}
+
+.plant-header-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 6.5rem; /* Adjust as needed */
 }

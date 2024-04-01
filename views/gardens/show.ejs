@@ -7,25 +7,45 @@
 <img src="<%= garden.imagePath %>" alt="<%= garden.name %>" class="garden-show-page__image">
 
 <div class="plants">
-    <h2>Vegetables</h2>
-    <ul id="vegetableList">
+    <div class="plant-header">
+        <h2>Vegetables</h2>
+    </div>
+    <div class="plant-box"></div>
+        <ul class= plantList id="vegetableList">
         <!-- vegetable plants added here -->
-    </ul>
+        </ul>
+    </div>
 
-    <h3>Herbs</h3>
-    <ul id="herbList">
+    <div class="plant-header">
+        <h2>Herbs</h2>
+    </div>
+    <div class="plant-box">
+        <ul class= plantList id="herbList">
         <!-- herb plants added here -->
-    </ul>
+         </ul>
+    </div>
 
-    <h4>Fruits</h4>
-    <ul id="fruitList">
-        <!-- flower list added here -->
-    </ul>
+    <div class="plant-header">
+        <h2>Fruits</h2>
+    </div>
+    <div class="plant-box"></div>
+         <ul class= plantList id="fruitList">
+         <!-- flower list added here -->
+         <li>tomato</li>
+         <form action="/add-vegetable" method="POST">
+            <input></input><button>add</button>
+         </form>
+        </ul>
+    </div>
 
-    <h5>Flowers</h5>
-    <ul id="flowerList">
+    <div class="plant-header">
+        <h2>Flowers</h2>
+    </div>
+    <div class="plant-box">
+        <ul class= plantList id="flowerList">
         <!-- flower list added here -->
-    </ul>
+        </ul>
+    </div>
 </div>
 
 
