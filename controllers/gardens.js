@@ -5,11 +5,14 @@ const Plant = require('../models/plant');
 module.exports = {
     index,
     list,
-    new: newGarden
+    new: newGarden,
+    create
 };
 
 async function index(req, res, next) {
-    res.render('index', { title: 'Garden' });
+    const gardens = await Garden.find({});
+    console.log(gardens)
+    res.render('gardens/index', { title: 'All Gardens', gardens: gardens });
   }
 
 async function list(req, res, next) {
@@ -17,5 +20,27 @@ async function list(req, res, next) {
 }
 
 async function newGarden(req, res, next) {
+    console.log("new garden")
     res.render('gardens/new', { title: 'Add Garden' }); 
 }
+
+async function create(req, res, next) {
+    console.log("here create")
+    // convert nowShowing's checkbox of nothing or "on" to boolean
+    //req.body.nowShowing = !!req.body.nowShowing;
+    // Remove empty properties so that defaults will be applied
+    for (let key in req.body) {
+      if (req.body[key] === '') delete req.body[key];
+    }
+    try {
+      // Update this line because now we need the _id of the new movie
+      const garden = await Garden.create(req.body);
+      // Redirect to the new movie's show functionality 
+      // res.redirect(`/garden/${garden._id}`);
+      res.redirect(`/`);
+    } catch (err) {
+      // Typically some sort of validation error
+      console.log(err);
+      res.render('gardens/new', { errorMsg: err.message });
+    }
+  }

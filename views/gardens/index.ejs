@@ -10,30 +10,14 @@
 </div>
 
 <div class = "gardens">
-   <div id="garden1"> 
-        <a href = "garden1">
-            <img src="/images/garden1.jpeg"/>
-            Pheonix Brooklyn Garden
-        </a>
-    </div>
-    <div id="garden2"> 
-        <a href = "garden1">
-            <img src="/images/garden1.jpeg"/>
-            Pheonix Brooklyn Garden
-        </a>
-    </div>
-    <div id="garden3"> 
-        <a href = "garden1">
-            <img src="/images/garden1.jpeg"/>
-            Pheonix Brooklyn Garden
-        </a>
-    </div>
-    <div id="garden4"> 
-        <a href = "garden1">
-            <img src="/images/garden1.jpeg"/>
-            imgPheonix Brooklyn Garden
-        </a>
-    </div>
+    <% for (let i=0; i < gardens.length; i++) { %>
+        <div id="garden<%= i %>"> 
+            <a href = "gardens/<%= gardens[i].id %>">
+                <img src="<%= gardens[i].imagePath %>"/>
+                <%= gardens[i].name %>
+            </a>
+        </div>
+    <% } %>
 </div>
 
 <%- include('../partials/footer') %>

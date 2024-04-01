@@ -10,5 +10,6 @@ router.get('/gardens', gardensCtrl.list);
 
 router.get('/add-garden', gardensCtrl.new);
 
+router.post('/gardens', gardensCtrl.create)
 
 module.exports = router;

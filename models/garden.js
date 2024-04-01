@@ -6,7 +6,8 @@ const Schema = mongoose.Schema;
 const gardenSchema = new Schema ({
   name: {type:String, required: true},
   address: {type: String, required: true},
-  startDate: {type: Date, required: true}  
+  startDate: {type: Date, required: true},
+  imagePath: {type: String, required: true} 
 }, {
     timestamps: true
 })
