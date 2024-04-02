@@ -38,9 +38,25 @@ a {
   float: top; 
 }
 
-.plant-header-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem;
-  gap: 6.5rem; /* Adjust as needed */
+
+
+
+/* .plants {
+  position: fixed;
+  position:absolute;
+  
+} */
+
+.plant-box {
+  margin-right: 8rem
+} 
+
+
+.plants {
+  position: fixed;
+  display: flex; /* Set display to flex */
+  flex-direction: row; /* Stack items vertically */
+  margin-top: -270px;
+  margin-left: 400px
 }
+

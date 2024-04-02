@@ -25,42 +25,38 @@ document.getElementById("add-plant-button").addEventListener("click", function()
 <img src="<%= garden.imagePath %>" alt="<%= garden.name %>" class="garden-show-page__image">
 
 <div class="plants">
-    <div class="plant-header">
-        <h2>Vegetables</h2>
-    </div>
-    <div class="plant-box">
-        <ul class= plantList id="vegetableList">
-        <!-- vegetable plants added here -->
-        </ul>
-    </div>
+    <h2>Vegetables</h2>
+        <div class="plant-box">
+            <ul class= plantList id="vegetableList">
+            <!-- vegetable plants added here -->
+             </ul>
+         </div>
+    <h2>Herbs</h2>
+        <div class="plant-box">
+            <ul class= plantList id="herbList">
+            <!-- herb plants added here -->
+            </ul>
+        </div>
 
-    <div class="plant-header">
-        <h2>Herbs</h2>
-    </div>
-    <div class="plant-box">
-        <ul class= plantList id="herbList">
-        <!-- herb plants added here -->
-         </ul>
-    </div>
+    <h2>Fruits</h2>
+        <div class="plant-box">
+            <ul class= plantList id="fruitList">
+            <!-- fruit list added here -->
+             </ul>
+         </div>
 
-    <div class="plant-header">
-        <h2>Fruits</h2>
-    </div>
-    <div class="plant-box"></div>
-         <ul class= plantList id="fruitList">
-         <!-- fruit list added here -->
-        </ul>
-    </div>
-
-    <div class="plant-header">
-        <h2>Flowers</h2>
-    </div>
-    <div class="plant-box">
-        <ul class= plantList id="flowerList">
-        <!-- flower list added here -->
-        </ul>
-    </div>
+    <h2>Flowers</h2>
+        <div class="plant-box">
+            <ul class= plantList id="flowerList">
+            <!-- flower list added here -->
+            </ul>
+        </div>
 </div>
+
+<h2>Volunteer Sign-Up</h2>
+<ul id="volunteer-list">
+    <!-- Volunteers will be added here -->
+</ul>
 
 <form id="add-volunteer-form" action="/gardens/<%= garden._id %>/volunteers" method="POST">
     <label>Name:</label>
@@ -73,6 +69,9 @@ document.getElementById("add-plant-button").addEventListener("click", function()
     <input type="time" name="timeTo">
     <input type="submit" value="Add Volunteer">
   </form>
+
+
+    
 
 
 <%- include('../partials/footer') %>
