@@ -56,8 +56,10 @@ document.getElementById("add-plant-button").addEventListener("click", function()
 <h2>Volunteer Sign-Up</h2>
 <ul id="volunteer-list">
     <!-- Volunteers will be added here -->
+
 </ul>
 
+ <!-- Add a form for adding a new volunteer -->
 <form id="add-volunteer-form" action="/gardens/<%= garden._id %>/volunteers" method="POST">
     <label>Name:</label>
     <input type="text" name="name">

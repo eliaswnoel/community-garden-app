@@ -4,9 +4,9 @@ const Volunteer = require('../models/volunteer');
 module.exports = {
   createVolunteer: async (req, res) => {
     const { name, date, timeFrom, timeTo, gardenId } = req.body;
-  
+    console.log(req.params)
     try {
-      const garden = await Garden.findById(gardenId);
+      const garden = req.params.gardenId;
       const volunteer = new Volunteer({
         name,
         date,
@@ -14,8 +14,9 @@ module.exports = {
         timeTo,
         garden: garden
       });
+      console.log(volunteer)
       await volunteer.save();
-      res.redirect(`/gardens/${garden._id}`);
+      res.redirect(`/gardens/${garden}`);
     } catch (err) {
       return res.status(500).json({ err });
     }

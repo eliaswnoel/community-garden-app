@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const reviewsCtrl = require('../controllers/volunteers');
+const volunteersCtrl = require('../controllers/volunteers');
 
-router.post('/gardens/:gardenId/volunteers', VolunteersController.createVolunteer);
+router.post('/gardens/:gardenId/volunteers', volunteersCtrl.createVolunteer);
 
 module.exports = router;

@@ -1,11 +1,5 @@
 const Garden = require('../models/garden');
 const Plant = require('../models/plant');
-// const gardensController = {
-//   show: async (req, res) => {
-//     const garden = await Garden.findById(req.params.id);
-//     res.render("gardens/show", { garden });
-//   },
-// };
 
 
 module.exports = {
