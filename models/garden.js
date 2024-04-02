@@ -24,22 +24,6 @@ const gardenSchema = new Schema ({
     timestamps: true
 });
 
-// const plantSchema = new Schema ({
-//   plantType: {
-//       type: String,
-//       required: true,
-//       validate: {
-//           validator: function(value) {
-//               return ['vegetable', 'fruit', 'herb', 'flower'].includes(value);
-//           },
-//           message: props => `${props.value} is not a valid plant type. It must be either 'vegetable', 'fruit', 'flower' or 'herb'.`
-//       }
-//   },
-//   plantName: {
-//       type: String,
-//       required: true
-//   },
-// });
 
 
 

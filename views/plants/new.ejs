@@ -1,0 +1,19 @@
+<div class="menu">
+  <a href = "homepage">HOME</a>
+  <a href = "/gardens">GARDENS</a>  
+</div>
+
+<%- include('../partials/header') %>
+
+
+<form id="add-plant-form" action="/plants" method="POST">
+  <label>Category:</label>
+  <input type="text" name="category">
+  <label>Name:</label>
+  <input type="text" name="name">
+  <label>Life Cycle:</label>
+  <input type="text" name="lifeCycle">
+  <input type="submit" value="Add Plant">
+</form>
+
+<%- include('../partials/footer') %>

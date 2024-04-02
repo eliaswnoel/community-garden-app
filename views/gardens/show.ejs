@@ -1,16 +1,31 @@
 <%- include('../partials/header') %>
 
+<div class="menu">
+    <a href = "homepage">HOME</a>
+    <a href = "/gardens">GARDENS</a>  
+</div>
+<div class="add-plant-button">
+    <button onclick="location.href='/plants/new';">ADD PLANT</button>
+    </div>
+<script>
+//click event listener for the "ADD PLANT" button
+document.getElementById("add-plant-button").addEventListener("click", function() {
+    //navigate to the new plant form page
+    window.location.href = "/plants/new";
+});
+</script>
+
+
 <h1><%= garden.name %></h1>
 <p>Year Founded: <%= garden.yearFounded %></p>
 <p>Address: <%= garden.address %></p>
-<!-- <img src="<%= garden.imagePath %>" alt="<%= garden.name %> Image"> -->
 <img src="<%= garden.imagePath %>" alt="<%= garden.name %>" class="garden-show-page__image">
 
 <div class="plants">
     <div class="plant-header">
         <h2>Vegetables</h2>
     </div>
-    <div class="plant-box"></div>
+    <div class="plant-box">
         <ul class= plantList id="vegetableList">
         <!-- vegetable plants added here -->
         </ul>
@@ -30,11 +45,7 @@
     </div>
     <div class="plant-box"></div>
          <ul class= plantList id="fruitList">
-         <!-- flower list added here -->
-         <li>tomato</li>
-         <form action="/add-vegetable" method="POST">
-            <input></input><button>add</button>
-         </form>
+         <!-- fruit list added here -->
         </ul>
     </div>
 
