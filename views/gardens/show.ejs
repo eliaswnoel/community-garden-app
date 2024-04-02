@@ -69,6 +69,8 @@ document.getElementById("add-plant-button").addEventListener("click", function()
 
  <!-- Add a form for adding a new volunteer -->
 <form id="add-volunteer-form" action="/gardens/<%= garden._id %>/volunteers" method="POST">
+    <!-- Only post to garden currently viewing -->
+    <input type="hidden" name="gardenId" value="<%= garden._id %>">
     <label>Name:</label>
     <input type="text" name="name">
     <label>Date:</label>
