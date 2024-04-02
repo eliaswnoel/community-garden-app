@@ -1,8 +1,11 @@
-<%- include('../partials/header') %>
 
+
+<%- include('../partials/header') %>
 <div class="menu">
     <a href = "homepage">HOME</a>
     <a href = "/gardens">GARDENS</a>  
+</div>
+ 
 </div>
 <div class="add-plant-button">
     <button onclick="location.href='/plants/new';">ADD PLANT</button>
@@ -58,6 +61,18 @@ document.getElementById("add-plant-button").addEventListener("click", function()
         </ul>
     </div>
 </div>
+
+<form id="add-volunteer-form" action="/gardens/<%= garden._id %>/volunteers" method="POST">
+    <label>Name:</label>
+    <input type="text" name="name">
+    <label>Date:</label>
+    <input type="date" name="date">
+    <label>From:</label>
+    <input type="time" name="timeFrom">
+    <label>To:</label>
+    <input type="time" name="timeTo">
+    <input type="submit" value="Add Volunteer">
+  </form>
 
 
 <%- include('../partials/footer') %>
