@@ -55,6 +55,14 @@ document.getElementById("add-plant-button").addEventListener("click", function()
 
 <h2>Volunteer Sign-Up</h2>
 <ul id="volunteer-list">
+    <ul>
+        <%volunteers.forEach(volunteer => { %>
+          <li>Name: <%= volunteer.name %></li>
+          <li>Date: <%= volunteer.date %></li>
+          <li>Time From: <%= volunteer.timeFrom %></li>
+          <li>Time To: <%= volunteer.timeTo %></li>
+          <br>
+        <% }); %>
     <!-- Volunteers will be added here -->
 
 </ul>

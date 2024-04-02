@@ -1,5 +1,6 @@
 const Garden = require('../models/garden');
 const Plant = require('../models/plant');
+const Volunteer = require('../models/volunteer')
 
 
 module.exports = {
@@ -49,8 +50,10 @@ async function create(req, res, next) {
   async function show(req, res) {
     try {
         const garden = await Garden.findById(req.params.id)
+        const volunteers = await Volunteer.find({garden:req.params.id})
+        console.log(volunteers)
         // const garden = await Garden.findById(req.params.id).populate('vegetable herb fruit flower');
-        res.render('gardens/show', { title: 'Garden', garden: garden });
+        res.render('gardens/show', { title: 'Garden', garden: garden, volunteers:volunteers});
     } catch (err) {
         // Handle errors
         console.error(err);
