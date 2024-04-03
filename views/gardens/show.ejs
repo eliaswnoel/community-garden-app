@@ -13,11 +13,7 @@
     </form>
 </div>
 <script>
-//click event listener for the "ADD PLANT" button
-// document.getElementById("add-plant-button").addEventListener("click", function() {
-//     //navigate to the new plant form page
-//     window.location.href = "/<%= garden._id %>/plants/new";
-// });
+
 </script>
 
 
@@ -26,11 +22,37 @@
 <p>Address: <%= garden.address %></p>
 <img src="<%= garden.imagePath %>" alt="<%= garden.name %>" class="garden-show-page__image">
 
-<div class="plants">
+<!-- 
+    <thead>
+      <tr>
+        <th><a href="/gardens/<%= garden._id %>/vegetables">Vegetables</a></th>
+        <th><a href="/gardens/<%= garden._id %>/fruits">Fruits</a></th>
+        <th><a href="/gardens/<%= garden._id %>/herbs">Herbs</a></th>
+        <th><a href="/gardens/<%= garden._id %>/flowers">Flowers</a></th>
+      </tr>
+    </thead> -->
+  
+
         <%- include('../partials/plants', {title: 'Vegetables', category: 'vegetable',  plants: plants}) %>
         <%- include('../partials/plants', {title: 'Herbs',      category: 'herb',       plants: plants}) %>
         <%- include('../partials/plants', {title: 'Fruits',     category: 'fruit',      plants: plants}) %>
         <%- include('../partials/plants', {title: 'Flowers',    category: 'flower',     plants: plants}) %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </div>
 
 <h2>Volunteer Sign-Up</h2>

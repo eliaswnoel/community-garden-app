@@ -1,8 +1,8 @@
-<div class="plant-box">
+<!-- <div class="plant-box">
   <h2><%= title %></h2>
   <% if (plants.length > 0) { %> 
     <ul>
-        <!-- plants will be added here -->
+       
         <%plants.forEach(plant => { %>
           <% if (plant.category == category) { %>
             
@@ -10,7 +10,7 @@
             <li>Name: <%= plant.name %></li>
             <li>Lifecycle: <%= plant.lifeCycle %></li>
             <br>
-            <!-- Delete button -->
+            
             <form action="/gardens/<%= garden._id %>/plants/<%= plant._id %>" method="POST">
               <input type="hidden" name="_method" value="delete">
               <button type="submit">X</button>
@@ -19,4 +19,37 @@
         <% }); %>
     </ul>
   <% } %> 
+</div> -->
+
+<div class="plant-box">
+  <h2>
+    <a href="/gardens/<%= garden._id %>/plants/<%= category %>">
+      <%= title %>
+    </a>
+  </h2>
+  <% if (plants.length > 0) { %> 
+    <ul>
+      <!-- plants will be added here -->
+      <% plants.forEach(plant => { %>
+        <% if (plant.category == category) { %>
+          <li>
+            <strong>Category:</strong> <%= plant.category %>
+          </li>
+          <li>
+            <strong>Name:</strong> <%= plant.name %>
+          </li>
+          <li>
+            <strong>Lifecycle:</strong> <%= plant.lifeCycle %>
+          </li>
+          <br>
+          <!-- Delete button -->
+          <form action="/gardens/<%= garden._id %>/plants/<%= plant._id %>" method="POST">
+            <input type="hidden" name="_method" value="delete">
+            <button type="submit">X</button>
+          </form>
+        <% } %>
+      <% }); %>
+    </ul>
+  <% } %> 
 </div>
+
