@@ -5,13 +5,14 @@
 
 <%- include('../partials/header') %>
 
-<form id="add-plant-form" method="POST">
+<form id="add-plant-form" method="POST" action="/gardens/<%= garden._id %>/plants/new">
   <label>Category:</label>
   <input type="text" name="category">
   <label>Name:</label>
   <input type="text" name="name">
   <label>Life Cycle:</label>
   <input type="text" name="lifeCycle">
+  <input type="hidden" name="garden" value="<%= garden._id %>" />
   <input type="submit" value="Add Plant">
 </form>
 

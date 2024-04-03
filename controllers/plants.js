@@ -13,18 +13,23 @@ async function newPlant(req, res) {
 async function create(req,res) {
     //get plant date from the request body
     const plantData = req.body;
-    plantData.gardenId = req.params.gardenId;
-
-
-    //create a new plant
-    const plant = new Plant(plantData);
-    await plant.save();
-
     //Find the garden and add the plant to it 
-    const garden = await Garden.findById(plantData.gardenId);
-    garden.plants.push(plant);
-    await garden.save();
+    const garden = await Garden.findById(req.params.id)
+    try {
+        //create a new plant
+        const plant = new Plant(plantData);
+        await plant.save();
 
-    //reditect to the garden page
-    res.redirect(`/gardens/${plantData.gardenId}`);
+        
+        // garden.plants.push(plant);
+        // await garden.save();
+
+        //reditect to the garden page
+        res.redirect(`/gardens/${garden._id}`);
+    } catch (err) {
+        // Typically some sort of validation error
+        console.log(err);
+
+        res.render('plants/new', { title: 'Add Garden', garden: garden, errorMsg: err.message});
+    }
 }

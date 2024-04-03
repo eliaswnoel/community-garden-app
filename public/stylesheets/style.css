@@ -38,15 +38,6 @@ a {
   float: top; 
 }
 
-
-
-
-/* .plants {
-  position: fixed;
-  position:absolute;
-  
-} */
-
 .plant-box {
   margin-right: 8rem
 } 
@@ -59,4 +50,3 @@ a {
   margin-top: -270px;
   margin-left: 400px
 }
-

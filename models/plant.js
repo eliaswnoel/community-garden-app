@@ -9,16 +9,19 @@ const Schema = mongoose.Schema;
 
 
 const plantSchema = new Schema ({
-  plantType: {
-    category: {
+  category: {
         type: String,
         required: true,
         enum: ['vegetable', 'fruit', 'herb', 'flower']
-      }
-  },
+    },
   name: {
       type: String,
       required: true
+  },
+  garden: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Garden',
+    required: true
   },
   lifeCycle: {
     type: String,

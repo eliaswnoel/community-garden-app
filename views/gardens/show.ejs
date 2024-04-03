@@ -8,14 +8,16 @@
  
 </div>
 <div class="add-plant-button">
-    <button onclick="location.href='/plants/new';">ADD PLANT</button>
-    </div>
+    <form action="/gardens/<%= garden._id %>/plants/new" method="GET">
+        <button >ADD PLANT</button>
+    </form>
+</div>
 <script>
 //click event listener for the "ADD PLANT" button
-document.getElementById("add-plant-button").addEventListener("click", function() {
-    //navigate to the new plant form page
-    window.location.href = "/plants/new";
-});
+// document.getElementById("add-plant-button").addEventListener("click", function() {
+//     //navigate to the new plant form page
+//     window.location.href = "/<%= garden._id %>/plants/new";
+// });
 </script>
 
 
@@ -55,6 +57,7 @@ document.getElementById("add-plant-button").addEventListener("click", function()
 
 <h2>Volunteer Sign-Up</h2>
 <ul id="volunteer-list">
+    <!-- Volunteers will be added here -->
     <ul>
         <%volunteers.forEach(volunteer => { %>
           <li>Name: <%= volunteer.name %></li>
@@ -62,10 +65,30 @@ document.getElementById("add-plant-button").addEventListener("click", function()
           <li>Time From: <%= volunteer.timeFrom %></li>
           <li>Time To: <%= volunteer.timeTo %></li>
           <br>
+          <!-- Delete button -->
+          <form action="/gardens/<%= garden._id %>/volunteers/<%= volunteer._id %>" method="POST">
+            <input type="hidden" name="_method" value="delete">
+            <button type="submit">X</button>
+        </form>
         <% }); %>
-    <!-- Volunteers will be added here -->
+    </ul>
 
-</ul>
+
+    <ul id="plant-list">
+        <!-- plants will be added here -->
+        <ul>
+            <%plants.forEach(plant => { %>
+              <li>Category: <%= plant.category %></li>
+              <li>Name: <%= plant.name %></li>
+              <li>Lifecycle: <%= plant.lifeCycle %></li>
+              <br>
+              <!-- Delete button -->
+              <form action="/gardens/<%= garden._id %>/plants/<%= plant._id %>" method="POST">
+                <input type="hidden" name="_method" value="delete">
+                <button type="submit">X</button>
+            </form>
+            <% }); %>
+        </ul>
 
  <!-- Add a form for adding a new volunteer -->
 <form id="add-volunteer-form" action="/gardens/<%= garden._id %>/volunteers" method="POST">
