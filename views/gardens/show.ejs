@@ -27,32 +27,10 @@
 <img src="<%= garden.imagePath %>" alt="<%= garden.name %>" class="garden-show-page__image">
 
 <div class="plants">
-    <h2>Vegetables</h2>
-        <div class="plant-box">
-            <ul class= plantList id="vegetableList">
-            <!-- vegetable plants added here -->
-             </ul>
-         </div>
-    <h2>Herbs</h2>
-        <div class="plant-box">
-            <ul class= plantList id="herbList">
-            <!-- herb plants added here -->
-            </ul>
-        </div>
-
-    <h2>Fruits</h2>
-        <div class="plant-box">
-            <ul class= plantList id="fruitList">
-            <!-- fruit list added here -->
-             </ul>
-         </div>
-
-    <h2>Flowers</h2>
-        <div class="plant-box">
-            <ul class= plantList id="flowerList">
-            <!-- flower list added here -->
-            </ul>
-        </div>
+        <%- include('../partials/plants', {title: 'Vegetables', category: 'vegetable',  plants: plants}) %>
+        <%- include('../partials/plants', {title: 'Herbs',      category: 'herb',       plants: plants}) %>
+        <%- include('../partials/plants', {title: 'Fruits',     category: 'fruit',      plants: plants}) %>
+        <%- include('../partials/plants', {title: 'Flowers',    category: 'flower',     plants: plants}) %>
 </div>
 
 <h2>Volunteer Sign-Up</h2>
@@ -74,21 +52,6 @@
     </ul>
 
 
-    <ul id="plant-list">
-        <!-- plants will be added here -->
-        <ul>
-            <%plants.forEach(plant => { %>
-              <li>Category: <%= plant.category %></li>
-              <li>Name: <%= plant.name %></li>
-              <li>Lifecycle: <%= plant.lifeCycle %></li>
-              <br>
-              <!-- Delete button -->
-              <form action="/gardens/<%= garden._id %>/plants/<%= plant._id %>" method="POST">
-                <input type="hidden" name="_method" value="delete">
-                <button type="submit">X</button>
-            </form>
-            <% }); %>
-        </ul>
 
  <!-- Add a form for adding a new volunteer -->
 <form id="add-volunteer-form" action="/gardens/<%= garden._id %>/volunteers" method="POST">

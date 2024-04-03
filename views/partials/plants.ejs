@@ -1,0 +1,22 @@
+<div class="plant-box">
+  <h2><%= title %></h2>
+  <% if (plants.length > 0) { %> 
+    <ul>
+        <!-- plants will be added here -->
+        <%plants.forEach(plant => { %>
+          <% if (plant.category == category) { %>
+            
+            <li>Category: <%= plant.category %></li>
+            <li>Name: <%= plant.name %></li>
+            <li>Lifecycle: <%= plant.lifeCycle %></li>
+            <br>
+            <!-- Delete button -->
+            <form action="/gardens/<%= garden._id %>/plants/<%= plant._id %>" method="POST">
+              <input type="hidden" name="_method" value="delete">
+              <button type="submit">X</button>
+            </form>
+          <% } %>
+        <% }); %>
+    </ul>
+  <% } %> 
+</div>
