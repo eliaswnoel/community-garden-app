@@ -36,20 +36,19 @@ async function create(req, res, next) {
     }
 
     let title = "New Garden";
-    
+
     try {
 
       const garden = await Garden.create(req.body);
 y 
-      // res.redirect(`/garden/${garden._id}`);
-      res.redirect(`/`);
+
     } catch (err) {
       console.log(err);
-      res.render('gardens/new', { title: title, errorMsg: err.message });
+      res.redirect('/')
     }
   }
 
-  async function show(req, res) {
+async function show(req, res) {
     try {
         const garden = await Garden.findById(req.params.id)
         const volunteers = await Volunteer.find({garden:req.params.id})
