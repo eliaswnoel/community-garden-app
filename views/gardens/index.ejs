@@ -10,6 +10,10 @@
                 <img src="<%= gardens[i].imagePath %>"/>
                 <%= gardens[i].name %>
             </a>
+            <form method="POST" action="/gardens/<%= gardens[i].id %>?_method=DELETE">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit">DELETE</button>
+            </form>
         </div>
     <% } %>
 </div>

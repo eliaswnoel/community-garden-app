@@ -10,6 +10,7 @@ module.exports = {
     create,
     show,
     gardenNewPlant,
+    deleteGarden
 };
 
 async function index(req, res, next) {
@@ -18,8 +19,9 @@ async function index(req, res, next) {
     res.render('gardens/index', { title: 'All Gardens', gardens: gardens });
   }
 
-async function list(req, res, next) {
-    res.render('gardens', { title: 'Garden' });
+async function list(req, res, next) { 
+  const gardens = await Garden.find({});
+    res.render('gardens', { title: 'Garden', gardens: gardens  });
 }
 
 async function newGarden(req, res, next) {
@@ -66,5 +68,15 @@ async function gardenNewPlant(req, res, next) {
   console.log("create new plant for a given garden");
   const garden = await Garden.findById(req.params.id)
   res.render('plants/new', { title: 'Add Garden', garden: garden }); 
-}
+};
 
+async function deleteGarden(req, res, next) {
+  try {
+    const { id } = req.params;
+    await Garden.findByIdAndDelete(id);
+    res.redirect('/gardens');
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Internal Server Error');
+  }
+}
