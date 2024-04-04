@@ -34,6 +34,9 @@ async function create(req, res, next) {
     for (let key in req.body) {
       if (req.body[key] === '') delete req.body[key];
     }
+
+    let title = "New Garden";
+    
     try {
 
       const garden = await Garden.create(req.body);
@@ -42,7 +45,7 @@ y
       res.redirect(`/`);
     } catch (err) {
       console.log(err);
-      res.render('gardens/new', { errorMsg: err.message });
+      res.render('gardens/new', { title: title, errorMsg: err.message });
     }
   }
 
