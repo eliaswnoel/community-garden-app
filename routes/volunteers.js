@@ -4,4 +4,6 @@ const volunteersCtrl = require('../controllers/volunteers');
 
 router.post('/gardens/:gardenId/volunteers', volunteersCtrl.createVolunteer);
 
+router.delete('/gardens/:gardenId/volunteers/:volunteerId', volunteersCtrl.deleteVolunteer);
+
 module.exports = router;

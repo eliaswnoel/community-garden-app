@@ -20,5 +20,17 @@ module.exports = {
     } catch (err) {
       return res.status(500).json({ err });
     }
+  },
+
+  deleteVolunteer: async (req, res) => {
+    console.log('deleting')
+    try {
+      const volunteerId = req.params.volunteerId;
+      await Volunteer.findByIdAndDelete(volunteerId);
+      res.redirect(`/gardens/${req.params.gardenId}`);
+    } catch (err) {
+      return res.status(500).json({ err });
+    }
   }
+
 };

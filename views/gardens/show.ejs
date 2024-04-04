@@ -45,7 +45,7 @@
           <li>Time To: <%= volunteer.timeTo %></li>
           <br>
           <!-- Delete button -->
-          <form action="/gardens/<%= garden._id %>/volunteers/<%= volunteer._id %>" method="POST">
+          <form action="/gardens/<%= garden._id %>/volunteers/<%= volunteer._id %>?_method=delete" method="POST">
             <input type="hidden" name="_method" value="delete">
             <button type="submit">X</button>
         </form>
