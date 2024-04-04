@@ -8,8 +8,10 @@ router.get('/new', plantsCtrl.new);
 // POST /plants (create functionality)
 router.post('/:gardenId/plants', plantsCtrl.create);
 
-//Get category for plant 
-// router.get('/:gardenId/:category', plantsCtrl.getPlantsByCategory);
+
+
+
+
 
 
 

@@ -16,6 +16,7 @@ router.get('/new', gardensCtrl.new);
 router.get('/:id', gardensCtrl.show);
 router.post('/', gardensCtrl.create);
 router.get('/:id/plants/:category/', plantsCtrl.getPlantsByCategory);
+router.delete('/:id/plants/:id', plantsCtrl.delete);
 
 
 

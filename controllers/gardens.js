@@ -9,7 +9,7 @@ module.exports = {
     new: newGarden,
     create,
     show,
-    gardenNewPlant
+    gardenNewPlant,
 };
 
 async function index(req, res, next) {
@@ -67,3 +67,4 @@ async function gardenNewPlant(req, res, next) {
   const garden = await Garden.findById(req.params.id)
   res.render('plants/new', { title: 'Add Garden', garden: garden }); 
 }
+

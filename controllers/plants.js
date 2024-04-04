@@ -4,7 +4,8 @@ const Garden = require('../models/garden');
 module.exports = {
     new: newPlant,
     create,
-    getPlantsByCategory
+    getPlantsByCategory,
+    delete: deletePlant
 };
 //render new plant form when button is clicked
 async function newPlant(req, res) {
@@ -49,4 +50,14 @@ async function getPlantsByCategory(req, res, next) {
         next(error);
     }
 };
+
+// Delete Plant
+  async function deletePlant(req, res) {
+      try {
+        const plant = await Plant.findByIdAndDelete(req.params.id);
+        res.redirect(`/gardens/${plant.garden}`);
+      } catch (error) {
+        res.status(500).send(error.message);
+      }
+}
 
