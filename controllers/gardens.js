@@ -15,13 +15,12 @@ module.exports = {
 
 async function index(req, res, next) {
     const gardens = await Garden.find({});
-    //console.log(gardens)
     res.render('gardens/index', { title: 'All Gardens', gardens: gardens });
   }
 
 async function list(req, res, next) { 
   const gardens = await Garden.find({});
-    res.render('gardens', { title: 'Garden', gardens: gardens  });
+    res.render('gardens', { title: 'Neighborhood Gardens', gardens: gardens  });
 }
 
 async function newGarden(req, res, next) {
@@ -42,7 +41,6 @@ y
       // res.redirect(`/garden/${garden._id}`);
       res.redirect(`/`);
     } catch (err) {
-      // Typically some sort of validation error
       console.log(err);
       res.render('gardens/new', { errorMsg: err.message });
     }
@@ -56,7 +54,7 @@ y
         console.log(volunteers)
         console.log(plants)
         // const garden = await Garden.findById(req.params.id).populate('vegetable herb fruit flower');
-        res.render('gardens/show', { title: 'Garden', garden: garden, volunteers:volunteers, plants: plants});
+        res.render('gardens/show', { title: 'Neighborhood Gardens', garden: garden, volunteers:volunteers, plants: plants});
     } catch (err) {
         // Handle errors
         console.error(err);

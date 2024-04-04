@@ -39,16 +39,25 @@
     <!-- Volunteers will be added here -->
     <ul>
         <%volunteers.forEach(volunteer => { %>
-          <li>Name: <%= volunteer.name %></li>
+    <li class="volunteer-item">
+        <li class="volunteer-item">
+            <span class="item-label">Name:</span> <span class="item-value"><%= volunteer.name %></span><br>
+            <span class="item-label">Date:</span> <span class="item-value"><%= volunteer.date %></span><br>
+            <span class="item-label">Time From:</span> <span class="item-value"><%= volunteer.timeFrom %></span><br>
+            <span class="item-label">Time To:</span> <span class="item-value"><%= volunteer.timeTo %></span><br>
+
+
+          <!-- <li>Name: <%= volunteer.name %></li>
           <li>Date: <%= volunteer.date %></li>
           <li>Time From: <%= volunteer.timeFrom %></li>
           <li>Time To: <%= volunteer.timeTo %></li>
-          <br>
+          <br> -->
           <!-- Delete button -->
           <form action="/gardens/<%= garden._id %>/volunteers/<%= volunteer._id %>?_method=delete" method="POST">
             <input type="hidden" name="_method" value="delete">
             <button type="submit">X</button>
         </form>
+    </li>
         <% }); %>
     </ul>
 
