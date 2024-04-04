@@ -54,8 +54,9 @@ async function getPlantsByCategory(req, res, next) {
 // Delete Plant
   async function deletePlant(req, res) {
       try {
-        const plant = await Plant.findByIdAndDelete(req.params.id);
-        res.redirect(`/gardens/${plant.garden}`);
+        const plant = await Plant.findByIdAndDelete(req.params.plantId);
+
+        res.redirect(`/gardens/${req.params.gardenId}`);
       } catch (error) {
         res.status(500).send(error.message);
       }

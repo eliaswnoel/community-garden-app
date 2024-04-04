@@ -94,3 +94,9 @@ ul {
 li {
   white-space: nowrap;
 }
+
+.plant-categories{
+  display: inline-block;
+  margin: 0 80px;
+  margin-bottom: 80px;
+}
