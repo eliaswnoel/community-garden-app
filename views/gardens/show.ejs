@@ -1,58 +1,37 @@
 
 
 <%- include('../partials/header') %>
-<div class="menu">
-    <a href = "homepage">HOME</a>
-    <a href = "/gardens">GARDENS</a>  
-</div>
- 
-</div>
 <div class="add-plant-button">
     <form action="/gardens/<%= garden._id %>/plants/new" method="GET">
         <button >ADD PLANT</button>
     </form>
 </div>
-<script>
-
-</script>
 
 
 <h1><%= garden.name %></h1>
 <p>Year Founded: <%= garden.yearFounded %></p>
 <p>Address: <%= garden.address %></p>
 <img src="<%= garden.imagePath %>" alt="<%= garden.name %>" class="garden-show-page__image">
-
-<!-- 
-    <thead>
-      <tr>
-        <th><a href="/gardens/<%= garden._id %>/vegetables">Vegetables</a></th>
-        <th><a href="/gardens/<%= garden._id %>/fruits">Fruits</a></th>
-        <th><a href="/gardens/<%= garden._id %>/herbs">Herbs</a></th>
-        <th><a href="/gardens/<%= garden._id %>/flowers">Flowers</a></th>
-      </tr>
-    </thead> -->
-  
-
-        <%- include('../partials/plants', {title: 'Vegetables', category: 'vegetable',  plants: plants}) %>
-        <%- include('../partials/plants', {title: 'Herbs',      category: 'herb',       plants: plants}) %>
-        <%- include('../partials/plants', {title: 'Fruits',     category: 'fruit',      plants: plants}) %>
-        <%- include('../partials/plants', {title: 'Flowers',    category: 'flower',     plants: plants}) %>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <h2>
+        <a href="/gardens/<%= garden._id %>/plants/vegetable">
+            Vegetables
+        </a>
+    </h2>
+    <h2>
+        <a href="/gardens/<%= garden._id %>/plants/herb">
+            Herbs
+        </a>
+    </h2>
+    <h2>
+        <a href="/gardens/<%= garden._id %>/plants/fruit">
+            Fruits
+        </a>
+    </h2>
+    <h2>
+        <a href="/gardens/<%= garden._id %>/plants/flower">
+            Flowers
+        </a>
+    </h2>
 </div>
 
 <h2>Volunteer Sign-Up</h2>

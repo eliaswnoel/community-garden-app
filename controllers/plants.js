@@ -3,7 +3,8 @@ const Garden = require('../models/garden');
 
 module.exports = {
     new: newPlant,
-    create
+    create,
+    getPlantsByCategory
 };
 //render new plant form when button is clicked
 async function newPlant(req, res) {
@@ -33,3 +34,19 @@ async function create(req,res) {
         res.render('plants/new', { title: 'Add Garden', garden: garden, errorMsg: err.message});
     }
 }
+
+
+async function getPlantsByCategory(req, res, next) {
+    try {
+        const gardenId = req.params.id;
+        const category = req.params.category;
+        console.log( {garden: gardenId, category: category })
+        const plants = await Plant.find({ garden: gardenId, category: category });
+        const garden = await Garden.findById(gardenId);
+        console.log(plants)
+        res.render('plants/index', { plants: plants, categoryTitle: category + 's', category: category, title: "Plants", garden: garden });
+    } catch (error) {
+        next(error);
+    }
+};
+

@@ -8,8 +8,9 @@ router.get('/new', plantsCtrl.new);
 // POST /plants (create functionality)
 router.post('/:gardenId/plants', plantsCtrl.create);
 
-// router.post('/plants', plantsCtrl.create);
-// POST /gardens/:id/planys(associate a plant with a garden)
-// router.post('/gardens/:id/plants', plantsCtrl.addToGarden);
+//Get category for plant 
+// router.get('/:gardenId/:category', plantsCtrl.getPlantsByCategory);
+
+
 
 module.exports = router;

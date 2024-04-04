@@ -15,6 +15,8 @@ router.get('/new', gardensCtrl.new);
 // POST /gardens
 router.get('/:id', gardensCtrl.show);
 router.post('/', gardensCtrl.create);
+router.get('/:id/plants/:category/', plantsCtrl.getPlantsByCategory);
+
 
 
 

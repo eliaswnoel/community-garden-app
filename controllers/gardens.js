@@ -29,16 +29,14 @@ async function newGarden(req, res, next) {
 
 async function create(req, res, next) {
     console.log("here create")
-    // convert nowShowing's checkbox of nothing or "on" to boolean
-    //req.body.nowShowing = !!req.body.nowShowing;
-    // Remove empty properties so that defaults will be applied
+
     for (let key in req.body) {
       if (req.body[key] === '') delete req.body[key];
     }
     try {
-      // Update this line because now we need the _id of the new movie
+
       const garden = await Garden.create(req.body);
-      // Redirect to the new movie's show functionality 
+y 
       // res.redirect(`/garden/${garden._id}`);
       res.redirect(`/`);
     } catch (err) {
