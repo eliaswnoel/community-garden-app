@@ -34,7 +34,25 @@
     </h2>
 </div>
 
-<h2>Volunteer Sign-Up</h2>
+<h2 class="volunteer-heading">Volunteer Sign-Up</h2>
+
+ <!-- form for adding a new volunteer -->
+ <form id="add-volunteer-form" action="/gardens/<%= garden._id %>/volunteers" method="POST">
+    <!-- Only post to garden currently viewing -->
+    <input type="hidden" name="gardenId" value="<%= garden._id %>">
+    <label>Name:</label>
+    <input type="text" name="name">
+    <label>Date:</label>
+    <input type="date" name="date">
+    <label>From:</label>
+    <input type="time" name="timeFrom">
+    <label>To:</label>
+    <input type="time" name="timeTo">
+    <input type="submit" value="Add Volunteer">
+  </form>
+
+
+
 <ul id="volunteer-list">
     <!-- Volunteers will be added here -->
     <ul>
@@ -63,20 +81,7 @@
 
 
 
- <!-- Add a form for adding a new volunteer -->
-<form id="add-volunteer-form" action="/gardens/<%= garden._id %>/volunteers" method="POST">
-    <!-- Only post to garden currently viewing -->
-    <input type="hidden" name="gardenId" value="<%= garden._id %>">
-    <label>Name:</label>
-    <input type="text" name="name">
-    <label>Date:</label>
-    <input type="date" name="date">
-    <label>From:</label>
-    <input type="time" name="timeFrom">
-    <label>To:</label>
-    <input type="time" name="timeTo">
-    <input type="submit" value="Add Volunteer">
-  </form>
+
 
 
     
