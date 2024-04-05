@@ -26,8 +26,8 @@ const plantSchema = new Schema ({
   },
   imagePath: {
     type: String, 
-    required: false
-} 
+    required: true
+}
 
 });
 

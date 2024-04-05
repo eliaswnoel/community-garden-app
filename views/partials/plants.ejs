@@ -9,11 +9,17 @@
         <button >ADD PLANT</button>
     </form>
   </div> 
+
+  <div class="plant-box">
   <% if (plants.length > 0) { %> 
     <ul>
       <!-- plants will be added here -->
       <% plants.forEach(plant => { %>
         <% if (plant.category == category) { %>
+          <li>
+            <strong></strong> <img src="<%= plant.imagePath %>" alt="Plant Image" class="plant-image">
+          </li>
+          
           <li>
             <strong>Category:</strong> <%= plant.category %>
                 <!-- Dropdown menu for category -->
@@ -29,7 +35,7 @@
           <!-- Delete button -->
           <form action="/gardens/<%= garden._id %>/plants/<%= plant._id %>?_method=DELETE" method="POST">
             <input type="hidden" name="_method" value="delete">
-            <button type="submit">X</button>
+            <button type="submit" class="plant-delete-button">X</button>
           </form>
         <% } %>
       <% }); %>
