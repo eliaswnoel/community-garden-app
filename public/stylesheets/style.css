@@ -1,19 +1,23 @@
 body {
+  background: linear-gradient(to top, #cce9cc, #2f972f);
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  /* color: #00B7FF; */
+  color: #0b171b;
 }
 
 .menu {
   border-color: black;
-  border: solid rgb(136, 135, 135) 2px;
+  /* border: solid rgb(136, 135, 135) 2px; */
+  border: solid rgb(3, 3, 3) 2px;
   padding: 10px; 
 }
 .menu a {
-  color: gray;
+  /* color: gray; */
+  color: rgb(27, 23, 23);
 }
 
 .gardens {
@@ -47,9 +51,6 @@ a {
   margin-top: 10px;
 }
 
-/* .plant-box {
-  margin-right: 8rem
-}  */
 
 
 .plants {
@@ -118,7 +119,7 @@ li {
 
 .inline-list li {
   display: inline;
-  margin-right: 10px; /* optional, adds some spacing between list items */
+  margin-right: 10px; 
 }
 .inline-list a {
   font-size: medium;
@@ -129,12 +130,12 @@ li {
   display: flex; 
   flex-direction: column; 
   margin-bottom: 30px;
-  margin: auto; /* Center the input fields horizontally within the form container and add space */
+  margin: auto; 
   width: 20%; 
 }
 
 form#new-form label {
-  margin-top: 50px; /* Add space between labels */
+  margin-top: 50px; 
 }
 
 
@@ -149,19 +150,19 @@ form#new-form label {
 }
 
 #add-plant-form {
-  padding: 15% 5%; /* Adjust padding for top/bottom and left/right */
+  padding: 15% 5%; 
   display: flex;
   flex-direction: column;
   margin-top: 80px;
   margin: auto;
-  width: 30%; /* Adjust width as needed */
+  width: 30%; 
   width: 20%; 
 }
 
 #add-plant-form label,
 #add-plant-form select,
 #add-plant-form input[type="text"] {
-  margin-bottom: 10px; /* Adjust margin between elements */
+  margin-bottom: 10px; 
 }
 
 .plant-items{

@@ -33,11 +33,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/', volunteersRouter);
 app.use('/gardens', gardensRouter);
-// app.use('/plants', plantsRouter)
 app.use('/', plantsRouter);
 
-// app.use('/gardens/:id/plants', plantsRouter);
-// app.use('/gardens/:gardenId/plants', plantsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
