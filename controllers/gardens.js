@@ -37,11 +37,11 @@ async function create(req, res, next) {
 
     try {
       const garden = await Garden.create(req.body);
+      res.redirect('/')
     } catch (err) {
       console.error(err);
       res.status(500).send('Internal Server Error');
     }
-    res.redirect('/')
   }
 
 async function show(req, res) {
