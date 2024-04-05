@@ -14,7 +14,6 @@ module.exports = {
         timeTo,
         garden: garden
       });
-      console.log(volunteer)
       await volunteer.save();
       res.redirect(`/gardens/${garden}`);
     } catch (err) {
@@ -23,7 +22,6 @@ module.exports = {
   },
 
   deleteVolunteer: async (req, res) => {
-    console.log('deleting')
     try {
       const volunteerId = req.params.volunteerId;
       await Volunteer.findByIdAndDelete(volunteerId);

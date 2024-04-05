@@ -21,7 +21,6 @@ async function create(req,res) {
         //create a new plant
         const plant = new Plant(plantData);
         await plant.save();
-        console.log('here')
         res.redirect(`/gardens/${garden._id}`);
     } catch (err) {
         res.redirect('plants/new', { title: 'Add Plant', garden: garden, errorMsg: err.message});
@@ -33,10 +32,8 @@ async function getPlantsByCategory(req, res, next) {
     try {
         const gardenId = req.params.id;
         const category = req.params.category;
-        console.log( {garden: gardenId, category: category })
         const plants = await Plant.find({ garden: gardenId, category: category });
         const garden = await Garden.findById(gardenId);
-        console.log(plants)
         res.render('plants/index', { plants: plants, categoryTitle: category + 's', category: category, title: "Plants", garden: garden });
     } catch (error) {
         next(error);

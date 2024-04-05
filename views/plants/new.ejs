@@ -2,11 +2,20 @@
 
 <form id="add-plant-form" method="POST" action="/gardens/<%= garden._id %>/plants/new">
   <label>Category:</label>
-  <input type="text" name="category">
+  <select name="category" >
+    <option value="vegetable">Vegetable</option>
+    <option value="flower">Flower</option>
+    <option value="fruit">Fruit</option>
+    <option value="herb">Herb</option>
+  </select>
   <label>Name:</label>
   <input type="text" name="name">
   <label>Life Cycle:</label>
-  <input type="text" name="lifeCycle">
+    <select name="lifeCycle" >
+    <option value="perennial">Perennial</option>
+    <option value="biennial">Biennial</option>
+    <option value="annual">Annual</option>
+  </select>
   <label>Image url:</label>
   <input type="text" name="imagePath">
   <input type="hidden" name="garden" value="<%= garden._id %>" />
