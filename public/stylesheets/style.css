@@ -30,6 +30,10 @@ a {
   padding-top: 16px;
 }
 
+.add-plant-button {
+  padding-top: 16px;
+}
+
 .gardens img {
   height: 100%;
   width: 100%;
@@ -118,4 +122,17 @@ li {
 }
 .inline-list a {
   font-size: medium;
+}
+
+#new-form {
+  padding: 6%;
+  display: flex; 
+  flex-direction: column; 
+  margin-bottom: 30px;
+  margin: auto; /* Center the input fields horizontally within the form container and add space */
+  width: 20%; 
+}
+
+form#new-form label {
+  margin-top: 50px; /* Add space between labels */
 }
