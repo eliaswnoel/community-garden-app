@@ -8,7 +8,7 @@
     <form action="/gardens/<%= garden._id %>/plants/new" method="GET">
         <button >ADD PLANT</button>
     </form>
-  </div>
+  </div> 
   <% if (plants.length > 0) { %> 
     <ul>
       <!-- plants will be added here -->
@@ -16,12 +16,14 @@
         <% if (plant.category == category) { %>
           <li>
             <strong>Category:</strong> <%= plant.category %>
+                <!-- Dropdown menu for category -->
           </li>
           <li>
             <strong>Name:</strong> <%= plant.name %>
           </li>
           <li>
             <strong>Lifecycle:</strong> <%= plant.lifeCycle %>
+                <!-- dropdown menu for category -->     
           </li>
           <br>
           <!-- Delete button -->
@@ -32,6 +34,6 @@
         <% } %>
       <% }); %>
     </ul>
-  <% } %> 
+  <% } %>
 </div>
 

@@ -15,7 +15,7 @@ module.exports = {
 
 async function index(req, res, next) {
     const gardens = await Garden.find({});
-    res.render('gardens/index', { title: 'All Gardens', gardens: gardens });
+    res.render('gardens/index', { title: 'Neighborhood Gardens', gardens: gardens });
   }
 
 async function list(req, res, next) { 
@@ -24,12 +24,10 @@ async function list(req, res, next) {
 }
 
 async function newGarden(req, res, next) {
-    console.log("new garden")
     res.render('gardens/new', { title: 'Add Garden' }); 
 }
 
 async function create(req, res, next) {
-    console.log("here create")
 
     for (let key in req.body) {
       if (req.body[key] === '') delete req.body[key];
@@ -40,10 +38,9 @@ async function create(req, res, next) {
     try {
 
       const garden = await Garden.create(req.body);
-y 
+ 
 
     } catch (err) {
-      console.log(err);
       res.redirect('/')
     }
   }
@@ -53,21 +50,16 @@ async function show(req, res) {
         const garden = await Garden.findById(req.params.id)
         const volunteers = await Volunteer.find({garden:req.params.id})
         const plants = await Plant.find({garden:req.params.id})
-        console.log(volunteers)
-        console.log(plants)
-        // const garden = await Garden.findById(req.params.id).populate('vegetable herb fruit flower');
         res.render('gardens/show', { title: 'Neighborhood Gardens', garden: garden, volunteers:volunteers, plants: plants});
     } catch (err) {
-        // Handle errors
         console.error(err);
         res.status(500).send('Internal Server Error');
     }
 };
 
 async function gardenNewPlant(req, res, next) {
-  console.log("create new plant for a given garden");
   const garden = await Garden.findById(req.params.id)
-  res.render('plants/new', { title: 'Add Garden', garden: garden }); 
+  res.render('plants/new', { title: 'Add Plant', garden: garden }); 
 };
 
 async function deleteGarden(req, res, next) {

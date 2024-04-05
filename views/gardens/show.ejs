@@ -7,31 +7,41 @@
     </form>
 </div>
 
-
-<h1><%= garden.name %></h1>
-<p>Year Founded: <%= garden.yearFounded %></p>
-<p>Address: <%= garden.address %></p>
-<img src="<%= garden.imagePath %>" alt="<%= garden.name %>" class="garden-show-page__image">
+<div>
+    <h1><%= garden.name %></h1>
+    <p>Year Founded: <%= garden.yearFounded %></p>
+    <p>Address: <%= garden.address %></p>
+    <img src="<%= garden.imagePath %>" alt="<%= garden.name %>" class="garden-show-page__image">
+</div>
+<div>
+    <UL>
+    <li></li>
     <h2 class="plant-categories">
         <a href="/gardens/<%= garden._id %>/plants/vegetable">
             Vegetables
         </a>
     </h2>
-    <h2 class="plant-categories">
-        <a href="/gardens/<%= garden._id %>/plants/herb">
-            Herbs
-        </a>
-    </h2>
-    <h2 class="plant-categories">
-        <a href="/gardens/<%= garden._id %>/plants/fruit">
-            Fruits
-        </a>
-    </h2>
-    <h2 class="plant-categories">
-        <a href="/gardens/<%= garden._id %>/plants/flower">
-            Flowers
-        </a>
-    </h2>
+    <li>
+        <h2 class="plant-categories">
+            <a href="/gardens/<%= garden._id %>/plants/herb">
+                Herbs
+            </a>
+        </h2>
+    </li>
+    <li>
+        <h2 class="plant-categories">
+            <a href="/gardens/<%= garden._id %>/plants/fruit">
+                Fruits
+            </a>
+        </h2>
+    </li>
+    <li>
+        <h2 class="plant-categories">
+            <a href="/gardens/<%= garden._id %>/plants/flower">
+                Flowers
+            </a>
+        </h2>
+    </li>
 </div>
 
 <h2 class="volunteer-heading">Volunteer Sign-Up</h2>
@@ -64,12 +74,6 @@
             <span class="item-label">Time From:</span> <span class="item-value"><%= volunteer.timeFrom %></span><br>
             <span class="item-label">Time To:</span> <span class="item-value"><%= volunteer.timeTo %></span><br>
 
-
-          <!-- <li>Name: <%= volunteer.name %></li>
-          <li>Date: <%= volunteer.date %></li>
-          <li>Time From: <%= volunteer.timeFrom %></li>
-          <li>Time To: <%= volunteer.timeTo %></li>
-          <br> -->
           <!-- Delete button -->
           <form action="/gardens/<%= garden._id %>/volunteers/<%= volunteer._id %>?_method=delete" method="POST">
             <input type="hidden" name="_method" value="delete">

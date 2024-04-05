@@ -21,18 +21,10 @@ async function create(req,res) {
         //create a new plant
         const plant = new Plant(plantData);
         await plant.save();
-
-        
-        // garden.plants.push(plant);
-        // await garden.save();
-
-        //reditect to the garden page
+        console.log('here')
         res.redirect(`/gardens/${garden._id}`);
     } catch (err) {
-        // Typically some sort of validation error
-        console.log(err);
-
-        res.render('plants/new', { title: 'Add Garden', garden: garden, errorMsg: err.message});
+        res.redirect('plants/new', { title: 'Add Plant', garden: garden, errorMsg: err.message});
     }
 }
 

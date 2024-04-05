@@ -2,10 +2,6 @@ const mongoose = require('mongoose');
 // optional shortcut to the mongoose.Schema class
 const Schema = mongoose.Schema;
 
-// vegetable
-// name
-// amount 
-// garden-id
 
 
 const plantSchema = new Schema ({
@@ -27,7 +23,12 @@ const plantSchema = new Schema ({
     type: String,
     required: true,
     enum: ['annual', 'biennial', 'perennial']
-}
+  },
+  imagePath: {
+    type: String, 
+    required: false
+} 
+
 });
 
 
