@@ -39,6 +39,10 @@ a {
   width: 100%;
 }
 
+.gardens .delete-button {
+  margin-top: 10px;
+}
+
 .plant-box {
   margin-right: 8rem
 } 
@@ -47,7 +51,7 @@ a {
 .plants {
   position: fixed;
   display: flex; 
-  flex-direction: row; /* Stack items vertically */
+  flex-direction: row; 
   margin-top: -270px;
   margin-left: 400px
 }

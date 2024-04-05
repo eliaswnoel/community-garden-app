@@ -12,7 +12,7 @@
             </a>
             <form method="POST" action="/gardens/<%= gardens[i].id %>?_method=DELETE">
                 <input type="hidden" name="_method" value="DELETE">
-                <button type="submit">DELETE</button>
+                <button type="submit" class="delete-button" >DELETE</button>
             </form>
         </div>
     <% } %>
