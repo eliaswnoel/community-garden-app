@@ -21,7 +21,8 @@ async function create(req,res) {
         //create a new plant
         const plant = new Plant(plantData);
         await plant.save();
-        res.redirect(`/gardens/${garden._id}`);
+        // res.redirect(`/gardens/${garden._id}`);
+        res.redirect(`/gardens/${garden._id}/${plant.category}`);
     } catch (err) {
         res.redirect('plants/new', { title: 'Add Plant', garden: garden, errorMsg: err.message});
     }
