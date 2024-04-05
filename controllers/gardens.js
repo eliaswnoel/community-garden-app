@@ -36,13 +36,12 @@ async function create(req, res, next) {
     let title = "New Garden";
 
     try {
-
       const garden = await Garden.create(req.body);
- 
-
     } catch (err) {
-      res.redirect('/')
+      console.error(err);
+      res.status(500).send('Internal Server Error');
     }
+    res.redirect('/')
   }
 
 async function show(req, res) {

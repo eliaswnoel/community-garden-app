@@ -33,9 +33,7 @@ a {
 }
 
 .garden-show-page__image {
-  height: 25%;
-  width: 25%;
-  float: top; 
+  width: 100%;
 }
 
 .plant-box {
@@ -77,12 +75,9 @@ ul {
   list-style-type: none;
 }
 
-.volunteer-heading {
-  text-align: center;
-}
+
 
 #add-volunteer-form{
-  text-align: center;
   padding: 1%;
 }
 
@@ -101,3 +96,19 @@ li {
   margin-bottom: 80px;
 }
 
+.inline-list{
+  text-align: center;
+}
+
+.inline-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.inline-list li {
+  display: inline;
+  margin-right: 10px; /* optional, adds some spacing between list items */
+}
+.inline-list a {
+  font-size: medium;
+}

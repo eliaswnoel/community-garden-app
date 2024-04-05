@@ -9,39 +9,33 @@
 
 <div>
     <h1><%= garden.name %></h1>
-    <p>Year Founded: <%= garden.yearFounded %></p>
+    <p>Year Founded: <%= (new Date(garden.yearFounded)).getFullYear() %></p>
     <p>Address: <%= garden.address %></p>
     <img src="<%= garden.imagePath %>" alt="<%= garden.name %>" class="garden-show-page__image">
 </div>
-<div>
-    <UL>
-    <li></li>
-    <h2 class="plant-categories">
-        <a href="/gardens/<%= garden._id %>/plants/vegetable">
-            Vegetables
-        </a>
-    </h2>
-    <li>
-        <h2 class="plant-categories">
+<div class="inline-list">
+    <UL >
+        <li>
+            <a href="/gardens/<%= garden._id %>/plants/vegetable">
+                Vegetables
+            </a>
+        </li>
+        <li>
             <a href="/gardens/<%= garden._id %>/plants/herb">
                 Herbs
             </a>
-        </h2>
-    </li>
-    <li>
-        <h2 class="plant-categories">
+        </li>
+        <li>
             <a href="/gardens/<%= garden._id %>/plants/fruit">
                 Fruits
             </a>
-        </h2>
-    </li>
-    <li>
-        <h2 class="plant-categories">
+        </li>
+        <li>
             <a href="/gardens/<%= garden._id %>/plants/flower">
                 Flowers
             </a>
-        </h2>
-    </li>
+        </li>
+    </UL>
 </div>
 
 <h2 class="volunteer-heading">Volunteer Sign-Up</h2>
