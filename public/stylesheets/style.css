@@ -47,9 +47,9 @@ a {
   margin-top: 10px;
 }
 
-.plant-box {
+/* .plant-box {
   margin-right: 8rem
-} 
+}  */
 
 
 .plants {
@@ -148,6 +148,20 @@ form#new-form label {
  margin-top: -20px;
 }
 
+#add-plant-form {
+  padding: 15% 5%; /* Adjust padding for top/bottom and left/right */
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  margin: auto;
+  width: 30%; /* Adjust width as needed */
+  width: 20%; 
+}
 
+#add-plant-form label,
+#add-plant-form select,
+#add-plant-form input[type="text"] {
+  margin-bottom: 10px; /* Adjust margin between elements */
+}
 
 
