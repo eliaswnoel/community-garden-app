@@ -10,7 +10,7 @@ a {
 .menu {
   border-color: black;
   border: solid rgb(136, 135, 135) 2px;
-
+  padding: 10px; 
 }
 .menu a {
   color: gray;
@@ -26,6 +26,9 @@ a {
   text-align: center;
 }
 
+.add-garden-button{
+  padding-top: 16px;
+}
 
 .gardens img {
   height: 100%;
@@ -43,7 +46,7 @@ a {
 
 .plants {
   position: fixed;
-  display: flex; /* Set display to flex */
+  display: flex; 
   flex-direction: row; /* Stack items vertically */
   margin-top: -270px;
   margin-left: 400px
