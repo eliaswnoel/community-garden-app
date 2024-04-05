@@ -21,7 +21,6 @@ async function create(req,res) {
         //create a new plant
         const plant = new Plant(plantData);
         await plant.save();
-        // res.redirect(`/gardens/${garden._id}`);
         res.redirect(`/gardens/${garden._id}/${plant.category}`);
     } catch (err) {
         res.redirect('plants/new', { title: 'Add Plant', garden: garden, errorMsg: err.message});
@@ -46,8 +45,6 @@ async function getPlantsByCategory(req, res, next) {
       try {
         const plant = await Plant.findByIdAndDelete(req.params.plantId);
         const garden = await Garden.findById(req.params.gardenId);
-
-        // res.redirect(`/gardens/${req.params.gardenId}`);
         res.redirect(`/gardens/${garden._id}/${plant.category}`);
       } catch (error) {
         res.status(500).send(error.message);

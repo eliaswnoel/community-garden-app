@@ -14,13 +14,13 @@ a {
   padding: 10px; 
 }
 .menu a {
-  /* color: gray; */
   color: rgb(27, 23, 23);
 }
 
 .gardens {
   color:#565182;
 }
+
 .gardens div {
   padding: 2%;
   float: left; 

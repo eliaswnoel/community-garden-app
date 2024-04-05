@@ -9,7 +9,6 @@ router.get('/:id/plants/new', gardensCtrl.gardenNewPlant);
 router.get('/', gardensCtrl.index);
 router.get('/new', gardensCtrl.new);
 router.get('/:id', gardensCtrl.show);
-
 router.post('/', gardensCtrl.create);
 router.delete('/:id', gardensCtrl.deleteGarden); 
 
