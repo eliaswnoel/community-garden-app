@@ -140,12 +140,12 @@ form#new-form label {
 
 
 .plant-image {
-  width: 100px; 
+  width: 300px; 
 }
 
 .plant-delete-button {
- margin-left: -5%;
- margin-top: -20px;
+ margin-top: auto;
+ margin-left: -300px;
 }
 
 #add-plant-form {
@@ -163,5 +163,17 @@ form#new-form label {
 #add-plant-form input[type="text"] {
   margin-bottom: 10px; /* Adjust margin between elements */
 }
+
+.plant-items{
+padding-top: 9%;
+text-align: center;
+}
+
+.plant-attribute {
+  padding-top: 1%;
+  margin: 10px;
+}
+
+
 
 
